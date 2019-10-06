@@ -1,5 +1,22 @@
 $(document).ready(function() {
 
+    var list=$('#main-urunler .urunler-wrap .urun-list')
+
+    $('#main-urunler .urunler-wrap .urun-list').hover(function () {
+       if ($(this).hasClass('active')){
+
+       }else{
+           list.removeClass('active');
+           $(this).addClass('active')
+       }
+    });
+
+    $('[data-toggle="modal"]').on('shown.bs.modal', function () {
+        alert('');
+        var href=$(this).attr('href')
+        $('#'+href).trigger('focus')
+    })
+
     /*--
     Sliders
 -----------------------------------*/
@@ -32,7 +49,7 @@ $(document).ready(function() {
             $asNavFor = $options.asNavFor ? $options.asNavFor : '',
             $fade = $options.fade ? $options.fade : false,
             $autoplay = $options.autoplay ? $options.autoplay : false,
-            $autoplaySpeed = $options.autoplaySpeed ? $options.autoplaySpeed : 5000,
+            $autoplaySpeed = $options.autoplaySpeed ? $options.autoplaySpeed : 2000,
             $swipe = $options.swipe ? $options.swipe : true,
             $swipeToSlide = $options.swipeToSlide ? $options.swipeToSlide : true,
             $verticalSwiping = $options.verticalSwiping ? $options.verticalSwiping : false,
