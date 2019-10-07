@@ -12,7 +12,6 @@ $(document).ready(function() {
     });
 
     $('[data-toggle="modal"]').on('shown.bs.modal', function () {
-        alert('');
         var href=$(this).attr('href')
         $('#'+href).trigger('focus')
     })
